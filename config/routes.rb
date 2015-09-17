@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :tickets do 
+    collection do
+      post 'import_tickets' => 'tickets#import_tickets'
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

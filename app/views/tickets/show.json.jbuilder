@@ -1,0 +1,1 @@
+json.extract! @ticket, :id, :zendesk_id, :status, :priority, :channel, :requester, :subject, :request_date, :assigned_date, :solved_date, :platform, :be_driver, :be_other_reason, :created_at, :updated_at

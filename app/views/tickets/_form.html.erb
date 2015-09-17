@@ -1,0 +1,65 @@
+<%= form_for(@ticket) do |f| %>
+  <% if @ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+      <% @ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :zendesk_id %><br>
+    <%= f.number_field :zendesk_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :channel %><br>
+    <%= f.text_field :channel %>
+  </div>
+  <div class="field">
+    <%= f.label :requester %><br>
+    <%= f.text_field :requester %>
+  </div>
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= f.label :request_date %><br>
+    <%= f.datetime_select :request_date %>
+  </div>
+  <div class="field">
+    <%= f.label :assigned_date %><br>
+    <%= f.datetime_select :assigned_date %>
+  </div>
+  <div class="field">
+    <%= f.label :solved_date %><br>
+    <%= f.datetime_select :solved_date %>
+  </div>
+  <div class="field">
+    <%= f.label :platform %><br>
+    <%= f.text_field :platform %>
+  </div>
+  <div class="field">
+    <%= f.label :be_driver %><br>
+    <%= f.text_field :be_driver %>
+  </div>
+  <div class="field">
+    <%= f.label :be_other_reason %><br>
+    <%= f.text_field :be_other_reason %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Zendesk:</strong>
+  <%= @ticket.zendesk_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @ticket.status %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @ticket.priority %>
+</p>
+
+<p>
+  <strong>Channel:</strong>
+  <%= @ticket.channel %>
+</p>
+
+<p>
+  <strong>Requester:</strong>
+  <%= @ticket.requester %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @ticket.subject %>
+</p>
+
+<p>
+  <strong>Request date:</strong>
+  <%= @ticket.request_date %>
+</p>
+
+<p>
+  <strong>Assigned date:</strong>
+  <%= @ticket.assigned_date %>
+</p>
+
+<p>
+  <strong>Solved date:</strong>
+  <%= @ticket.solved_date %>
+</p>
+
+<p>
+  <strong>Platform:</strong>
+  <%= @ticket.platform %>
+</p>
+
+<p>
+  <strong>Be driver:</strong>
+  <%= @ticket.be_driver %>
+</p>
+
+<p>
+  <strong>Be other reason:</strong>
+  <%= @ticket.be_other_reason %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>
