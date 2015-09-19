@@ -1,0 +1,1 @@
+json.extract! @jira, :id, :ticket_id, :key, :sumary, :issue_type, :status, :priority, :resolution, :reporter, :created, :description, :date_of_first_response, :sales_priority, :acceptance_criteria, :created_at, :updated_at

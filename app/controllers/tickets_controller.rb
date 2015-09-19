@@ -55,6 +55,8 @@ class TicketsController < ApplicationController
     end
   end
 
+
+
   # DELETE /tickets/1
   # DELETE /tickets/1.json
   def destroy
@@ -63,6 +65,11 @@ class TicketsController < ApplicationController
       format.html { redirect_to tickets_url, notice: 'Ticket was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def import_tickets
+    Ticket.import(params[:file])
+    redirect_to tickets_path, notice: "Tickets have been imported."
   end
 
   private
@@ -75,4 +82,6 @@ class TicketsController < ApplicationController
     def ticket_params
       params.require(:ticket).permit(:zendesk_id, :status, :priority, :channel, :requester, :subject, :request_date, :assigned_date, :solved_date, :platform, :be_driver, :be_other_reason)
     end
+
+
 end

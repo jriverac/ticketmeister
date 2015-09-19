@@ -2,7 +2,7 @@
 
 <p>
   <strong>Zendesk:</strong>
-  <%= @ticket.zendesk_id %>
+  <%= link_to @ticket.zendesk_id, "http://newrelic.zendesk.com/agent/tickets/#{@ticket.zendesk_id}" %>
 </p>
 
 <p>

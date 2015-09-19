@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :jiras
+  resources :jiras
   resources :tickets do 
     collection do
       post 'import_tickets' => 'tickets#import_tickets'

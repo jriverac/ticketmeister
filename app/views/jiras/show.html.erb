@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ticket:</strong>
+  <%= @jira.ticket_id %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @jira.key %>
+</p>
+
+<p>
+  <strong>Sumary:</strong>
+  <%= @jira.sumary %>
+</p>
+
+<p>
+  <strong>Issue type:</strong>
+  <%= @jira.issue_type %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @jira.status %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @jira.priority %>
+</p>
+
+<p>
+  <strong>Resolution:</strong>
+  <%= @jira.resolution %>
+</p>
+
+<p>
+  <strong>Reporter:</strong>
+  <%= @jira.reporter %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @jira.created %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @jira.description %>
+</p>
+
+<p>
+  <strong>Date of first response:</strong>
+  <%= @jira.date_of_first_response %>
+</p>
+
+<p>
+  <strong>Sales priority:</strong>
+  <%= @jira.sales_priority %>
+</p>
+
+<p>
+  <strong>Acceptance criteria:</strong>
+  <%= @jira.acceptance_criteria %>
+</p>
+
+<%= link_to 'Edit', edit_jira_path(@jira) %> |
+<%= link_to 'Back', jiras_path %>

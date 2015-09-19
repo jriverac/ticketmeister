@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Tickets</h1>
+<h1>Listing <%= @tickets.count %> Tickets</h1>
 
 <table>
   <thead>
@@ -24,7 +24,7 @@
   <tbody>
     <% @tickets.each do |ticket| %>
       <tr>
-        <td><%= ticket.zendesk_id %></td>
+        <td><%= link_to ticket.zendesk_id, "http://newrelic.zendesk.com/agent/tickets/#{ticket.zendesk_id}" %></td>
         <td><%= ticket.status %></td>
         <td><%= ticket.priority %></td>
         <td><%= ticket.channel %></td>
@@ -47,3 +47,8 @@
 <br>
 
 <%= link_to 'New Ticket', new_ticket_path %>
+
+<%= form_tag import_tickets_tickets_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import tickets"%>
+<% end %>

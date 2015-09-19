@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150916225419) do
+ActiveRecord::Schema.define(version: 20150917172202) do
+
+  create_table "jiras", force: :cascade do |t|
+    t.integer  "ticket_id"
+    t.string   "key"
+    t.string   "sumary"
+    t.string   "issue_type"
+    t.string   "status"
+    t.string   "priority"
+    t.string   "resolution"
+    t.string   "reporter"
+    t.datetime "created"
+    t.text     "description"
+    t.date     "date_of_first_response"
+    t.string   "sales_priority"
+    t.text     "acceptance_criteria"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "tickets", force: :cascade do |t|
     t.integer  "zendesk_id"

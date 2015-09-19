@@ -1,0 +1,69 @@
+<%= form_for(@jira) do |f| %>
+  <% if @jira.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jira.errors.count, "error") %> prohibited this jira from being saved:</h2>
+
+      <ul>
+      <% @jira.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ticket_id %><br>
+    <%= f.number_field :ticket_id %>
+  </div>
+  <div class="field">
+    <%= f.label :key %><br>
+    <%= f.text_field :key %>
+  </div>
+  <div class="field">
+    <%= f.label :sumary %><br>
+    <%= f.text_field :sumary %>
+  </div>
+  <div class="field">
+    <%= f.label :issue_type %><br>
+    <%= f.text_field :issue_type %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :resolution %><br>
+    <%= f.text_field :resolution %>
+  </div>
+  <div class="field">
+    <%= f.label :reporter %><br>
+    <%= f.text_field :reporter %>
+  </div>
+  <div class="field">
+    <%= f.label :created %><br>
+    <%= f.datetime_select :created %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_first_response %><br>
+    <%= f.date_select :date_of_first_response %>
+  </div>
+  <div class="field">
+    <%= f.label :sales_priority %><br>
+    <%= f.text_field :sales_priority %>
+  </div>
+  <div class="field">
+    <%= f.label :acceptance_criteria %><br>
+    <%= f.text_area :acceptance_criteria %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
